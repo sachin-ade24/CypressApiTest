@@ -5,6 +5,9 @@ describe("API Testing with Cypress", () => {
         expect(response.status).to.eq(200);
         expect(response.body).to.have.property("id", 1);
         expect(response.body).to.have.property("name");
+        expect(response.body.name).to.eq("Leanne Graham");
+        expect(response.body).to.have.property("name", "Leanne Graham");
+        expect(response.body).to.be.an("object");
       }
     );
   });
